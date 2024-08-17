@@ -1,0 +1,92 @@
+<p>footer works!</p>
+<footer class="bg-gray-800 text-gray-300 py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+      <div class="space-y-6">
+        <img src="logo.png" alt="Logo" width="128" height="38" />
+
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-white mb-4">NEW TO JUMIA?</h3>
+          <p class="mb-4">Subscribe to our newsletter to get updates on our latest offers!</p>
+          <form (submit)="handleSubmit($event)" class="space-y-4">
+            <div class="flex items-center bg-white rounded-md p-1">
+              <mat-icon class="ml-2">email</mat-icon>
+              <input
+                matInput
+                type="email"
+                placeholder="Enter E-mail Address"
+                ngModel="email()"
+                class="border-none"
+                required
+              />
+              <button mat-raised-button color="primary" type="submit">
+                <mat-icon>send</mat-icon>
+              </button>
+            </div>
+
+            <div class="flex gap-2">
+              <button
+                mat-stroked-button
+                color="primary"
+                type="button"
+                [ngClass]="{ 'bg-orange-500 text-white': gender() === 'MALE' }"
+                (click)="gender.set('MALE')"
+              >
+                MALE
+              </button>
+              <button
+                mat-stroked-button
+                color="primary"
+                type="button"
+                [ngClass]="{ 'bg-orange-500 text-white': gender() === 'FEMALE' }"
+                (click)="gender.set('FEMALE')"
+              >
+                FEMALE
+              </button>
+            </div>
+
+            <div class="flex items-center space-x-2">
+              <mat-checkbox ngModel="agreed()"></mat-checkbox>
+              <label for="terms" class="text-sm">
+                I agree to Jumia's Privacy and Cookie Policy.
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right side content -->
+      <div class="text-right space-y-6">
+        <h3 class="text-2xl font-bold text-white mb-4">DOWNLOAD JUMIA FREE APP</h3>
+        <p class="mb-4">Get access to exclusive offers!</p>
+        <div class="flex justify-end space-x-4">
+          <img src="app-store.png" alt="App Store" class="h-10" />
+          <img src="google-play.png" alt="Google Play" class="h-10" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Links and footer -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <!-- Repeated sections go here -->
+    </div>
+
+    <div class="flex justify-between items-center pt-8 border-t border-gray-700">
+      <div class="flex space-x-4 mb-4">
+        <a href="#" class="text-gray-400 hover:text-white">
+          <mat-icon>facebook</mat-icon>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white">
+          <mat-icon>twitter</mat-icon>
+        </a>
+        <!-- Other icons -->
+      </div>
+
+      <div class="flex space-x-4">
+        <img src="cash-on-delivery.png" alt="Cash on Delivery" class="h-8" />
+        <img src="mastercard.png" alt="Mastercard" class="h-8" />
+        <!-- Other payment methods -->
+      </div>
+    </div>
+  </div>
+</footer>

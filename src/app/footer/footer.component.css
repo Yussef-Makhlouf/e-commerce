@@ -1,0 +1,24 @@
+.bg-gray-800 {
+  background-color: #313133;
+
+}
+
+.bg-gray-700 {
+  background-color: #3D3D3F;
+}
+
+.text-gray-300 {
+  color: #D1D5DB;
+}
+.text-white {
+  color: white;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.form-control {
+  padding-left: 2.5rem;
+  padding-right: 3rem;
+}
+
+
